@@ -22,7 +22,8 @@
     "babel-cli": "6.9.0",
     "babel-preset-es2015": "6.9.0",
     "babel-preset-es2015-loose": "7.0.0",
-    "standard": "7.1.0"
+    "standard": "7.1.0",
+    "uglifyjs": "2.4.10"
   },
   "repository": {
     "type": "git",
