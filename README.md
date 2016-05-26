@@ -17,10 +17,10 @@ const blue = 150
 const alpha = 255 // Fully opaque
 
 // Now convert it to a single packed integer
-const packedPixel = bitPacker.packPixel(red, green, blue, alpha) // equals `-6908266`
+const packedPixel = bitPacker.packPixel(red, green, blue, alpha) // equals `-6908266`, it's negative when viewed in "normal" JS but inside a uint32Array it will be correct
 
 // And we can do the opposite as well:
-const packedPixel2 = -328966 // This is an almost entirely black pixel
+const packedPixel2 = -328966 // This is an almost entirely black pixel, it's negative when viewed in "normal" JS but inside a uint32Array it will be correct
 
 const unpackedPixelArray = bitPacker.unpackPixel(packedPixel2) // equals `[250, 250, 250, 255]`
 ```
