@@ -1,0 +1,40 @@
+{
+  "name": "bitpacker",
+  "version": "1.0.0",
+  "description": "Fast way to convert between \"packed\" and \"unpacked\" image data pixels.",
+  "main": "build/bitpacker.js",
+  "scripts": {
+    "buildEs5": "babel ./src/bitpacker.js > ./build/bitpacker.js",
+    "buildMin": "babel ./src/bitpacker.js | uglifyjs --screw-ie8 --compress unsafe,keep_fargs=false --mangle -- > ./build/bitpacker.min.js",
+    "build": "npm run buildEs5 && npm run buildMin",
+    "publish": "sh ./publish.sh",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "standard": {
+    "parser": "babel-eslint"
+  },
+  "babel": {
+    "presets": [
+      "es2015-loose"
+    ]
+  },
+  "devDependencies": {
+    "babel-cli": "6.9.0",
+    "babel-preset-es2015": "6.9.0",
+    "babel-preset-es2015-loose": "7.0.0",
+    "standard": "7.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Klathmon/Beep.js.git"
+  },
+  "keywords": [
+    "ImageData"
+  ],
+  "author": "Gregory Benner <gregbenner1@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Klathmon/BitPacker.js/issues"
+  },
+  "homepage": "https://github.com/Klathmon/BitPacker.js#readme"
+}
